@@ -32,6 +32,7 @@ Step 2: Install this application
   rake neo4j:install
   rake neo4j:create
   rake neo4j:load
+  Run command that is shown (doing this to peel away some of the magic)
   rake neo4j:start
   rake neo4j:index
 
