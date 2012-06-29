@@ -7,3 +7,76 @@ These files will imported into the Neo4j using the Neo4j Batch Importer
 * {Batch Importer - Part 1}[http://maxdemarzi.com/2012/02/28/batch-importer-part-1/]
 * {Batch Importer - Part 2}[http://maxdemarzi.com/2012/02/28/batch-importer-part-2/]
 * {Batch Importer - Repository}[https://github.com/jexp/batch-import]
+
+== Installation
+
+Make sure prerequisites (maven, java, ruby) are installed (see below) then starting from a Project directory:
+
+Step 1: Install Batch Importer
+
+See http://maxdemarzi.com/2012/02/28/batch-importer-part-1/ for a detailed guide.
+
+Quick Steps:
+  
+  git clone https://github.com/jexp/batch-import
+  cd batch-import
+  mvn clean compile assembly:single
+  cd ..
+
+Step 2: Install this application
+
+  git clone https://github.com/maxdemarzi/neo_generate.git
+  cd neo_generate
+  gem install bundler
+  bundle install
+  rake neo4j:install
+  rake neo4j:create
+  rake neo4j:load
+  rake neo4j:start
+  rake neo4j:index
+
+== Customizing the graph
+
+Open up neo_generate.rb and alter the nodes, relationships and sizes.
+
+
+
+== Pre-Requisites
+
+* {Java}[http://www.java.com/]
+* {Maven}[http://maven.apache.org/]
+* {Ruby}[http://www.ruby-lang.org/]
+
+On Ubuntu:
+
+Install Basics:
+
+  sudo apt-get install build-essential wget
+
+Install Java:
+
+  sudo add-apt-repository ppa:webupd8team/java
+  sudo apt-get update
+  sudo apt-get install oracle-java7-installer
+
+Install Maven:
+
+  sudo apt-get install maven2
+  
+  or for Maven 3.0.4
+  
+  wget http://www.gtlib.gatech.edu/pub/apache/maven/binaries/apache-maven-3.0.4-bin.tar.gz
+  tar -zxf apache-maven-3.0.4-bin.tar.gz
+  sudo cp -R apache-maven-3.0.4 /usr/local
+  sudo ln -s /usr/local/apache-maven-3.0.4/bin/mvn /usr/bin/mvn
+
+Install Ruby:
+
+  sudo apt-get install libxslt-dev libxml2-dev libmysql-ruby libmysqlclient-dev libreadline-dev 
+  libcurl4-openssl-dev openssl libreadline6 libreadline6-dev curl git-core zlib1g 
+  zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf 
+  libc6-dev ncurses-dev automake libtool bison subversion 
+
+  curl -L https://get.rvm.io | bash -s stable
+  rvm install 1.9.3
+  

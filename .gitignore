@@ -1,1 +1,3 @@
+*.csv
 .project
+neo4j
