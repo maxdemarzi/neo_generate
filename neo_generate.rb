@@ -172,8 +172,9 @@ require 'uri'
   def load_graph
     # Prints the command to Load the data into Neo4j
     # 
-    puts "Copy and Paste the following:"
-    puts "java -server -Xmx4G -jar ../batch-import/target/batch-import-jar-with-dependencies.jar neo4j/data/graph.db nodes.csv rels.csv"    
+    puts "Running the following:"
+    puts "java -server -Xmx4G -jar ../batch-import/target/batch-import-jar-with-dependencies.jar neo4j/data/graph.db nodes.csv rels.csv"
+    exec "java -server -Xmx4G -jar ../batch-import/target/batch-import-jar-with-dependencies.jar neo4j/data/graph.db nodes.csv rels.csv"    
   end 
   
   def index_graph
