@@ -1,3 +1,4 @@
+batch.properties
 *.csv
 .project
 neo4j

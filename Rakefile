@@ -8,7 +8,4 @@ namespace :neo4j do
   task :load do
     load_graph
   end
-  task :index do
-    index_graph
-  end
 end

@@ -1,12 +1,13 @@
 == Welcome to NeoGenerate
 
-This Project allows you to quickly define a graph and generate nodes.csv and rels.csv.
+This Project allows you to quickly define a graph and generate tab separated files.
 These files will imported into the Neo4j using the Neo4j Batch Importer
 
-* {NeoGenerate Blog Post}[http://maxdemarzi.com/2012/06]
+* {NeoGenerate Blog Post}[http://wp.me/p26jdv-hH]
 * {Batch Importer - Part 1}[http://maxdemarzi.com/2012/02/28/batch-importer-part-1/]
 * {Batch Importer - Part 2}[http://maxdemarzi.com/2012/02/28/batch-importer-part-2/]
-* {Batch Importer - Repository}[https://github.com/jexp/batch-import]
+* {Batch Importer - Part 3}[http://maxdemarzi.com/2012/07/02/batch-importer-part-3/]
+* {Batch Importer - Repository}[https://github.com/maxdemarzi/batch-import]
 
 == Installation
 
@@ -18,7 +19,7 @@ See http://maxdemarzi.com/2012/02/28/batch-importer-part-1/ for a detailed guide
 
 Quick Steps:
   
-  git clone https://github.com/jexp/batch-import
+  git clone https://github.com/maxdemarzi/batch-import
   cd batch-import
   mvn clean compile assembly:single
   cd ..
@@ -33,13 +34,10 @@ Step 2: Install this application
   rake neo4j:create
   rake neo4j:load
   rake neo4j:start
-  rake neo4j:index
 
 == Customizing the graph
 
 Open up neo_generate.rb and alter the nodes, relationships and sizes.
-
-
 
 == Prerequisites
 
